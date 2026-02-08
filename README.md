@@ -7,7 +7,7 @@ This project converts data into an Excel format using the `openpyxl` library. It
 ## Installation Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Danncode10/pythonConversionToExcel.git
+   git clone https://github.com/StixKnowledge/pythonConversionToExcel.git
    cd pythonConversionToExcel
    ```
 
