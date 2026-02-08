@@ -3,7 +3,7 @@ from openpyxl.drawing.image import Image
 # import os
 from datetime import datetime
 
-wb = openpyxl.load_workbook("APPLICATION-for-MARRIAGE-LICENSE.xlsx")
+wb = openpyxl.load_workbook("data/APPLICATION-for-MARRIAGE-LICENSE.xlsx")
 sheet = wb.active
 
 # ------VARIABLES FOR INPUT------------
@@ -50,7 +50,7 @@ def cm_to_pixels(cm):
     return int((cm / 2.54) * 96)
 
 
-couple_img = Image("couple_img.png")
+couple_img = Image("data/couple_img.png")
 couple_img.height = cm_to_pixels(3.75)
 couple_img.width = cm_to_pixels(5.73)
 # Select the "Notice" sheet (even if it's not active)
@@ -133,5 +133,5 @@ if sheet_name:
 
     # Save with timestamped filename
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_filename = f"{sheet_name}_{timestamp}.xlsx"
+    output_filename = f"Excel/{sheet_name}_{timestamp}.xlsx"
     wb.save(output_filename)
